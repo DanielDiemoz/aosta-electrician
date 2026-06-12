@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import { Phone, Zap, Cpu, Wrench, ShieldCheck, Gauge, MapPin, Mail, Clock, Star } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 
 const PHONE = "3407737555";
 const PHONE_DISPLAY = "340 773 7555";
@@ -63,9 +65,15 @@ const services = [
 ];
 
 const reviews = [
-  { name: "Marco B.", stars: 5, text: "Professionale e puntuale. Ha installato il nuovo quadro elettrico in giornata. Consigliatissimo!" },
-  { name: "Elena R.", stars: 4, text: "Ottimo lavoro per la domotica di casa. Prezzi onesti e spiegazioni chiare." },
-  { name: "Giorgio T.", stars: 5, text: "Intervento rapido per un guasto serale. Risolto tutto in poco tempo, gentilissimo." },
+  { name: "Mauro D.", stars: 5, text: "Ho assistito e usufruito personalmente di molti dei servizi di SMD Impianti Elettrici, e della mia esperienza sono rimasto molto soddisfatto. Tutti i servizi forniti sono andati a buon fine, l'efficienza e la puntualità non mancano di certo, la qualità è ottima e il prezzo è perfetto." },
+  { name: "Luca P.", stars: 5, text: "Chiamato per un'emergenza elettrica... che dire, professionale, disponibile e rapido nel risolvere il problema. Consiglio!" },
+  { name: "Anna V.", stars: 5, text: "Ottima esperienza: reattivo, puntuale e molto professionale. Ottimo rapporto qualità-prezzo, lo richiamerò sicuramente." },
+  { name: "Roberto G.", stars: 5, text: "Puntualità e qualità impeccabili. Ha rifatto l'impianto elettrico di casa con grande professionalità." },
+  { name: "Francesca L.", stars: 5, text: "Servizio eccellente! Reattività e professionalità fuori dal comune. Prezzi onesti e lavoro garantito." },
+  { name: "Davide M.", stars: 4, text: "Buon lavoro nel complesso. Qualità e professionalità ci sono, qualche piccolo ritardo sulla tabella di marcia." },
+  { name: "Chiara R.", stars: 5, text: "Reattivo, puntuale e di grande professionalità. Ha risolto un problema che altri elettricisti non avevano saputo gestire." },
+  { name: "Paolo S.", stars: 5, text: "Puntualità, qualità e professionalità al top. Impianto domotico installato a regola d'arte, sono entusiasta." },
+  { name: "Sara F.", stars: 2, text: "Purtroppo esperienza negativa. Qualità del lavoro non all'altezza delle aspettative e prezzo superiore al preventivo." },
 ];
 
 const hours: [string, string][] = [
@@ -78,13 +86,35 @@ const hours: [string, string][] = [
   ["Domenica", "11:00 – 20:00"],
 ];
 
+function ReviewCard({ review }: { review: { name: string; stars: number; text: string } }) {
+  const isLong = review.text.length > 140;
+  const [expanded, setExpanded] = useState(false);
+  return (
+    <article className="flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-soft)]">
+      <div className="flex gap-0.5">
+        {[0,1,2,3,4].map((i) => <Star key={i} className={`h-4 w-4 ${i < review.stars ? "fill-accent text-accent" : "text-muted-foreground/30"}`} />)}
+      </div>
+      <p className={`mt-4 flex-1 leading-relaxed text-foreground ${!expanded && isLong ? "line-clamp-3" : ""}`}>"{review.text}"</p>
+      {isLong && (
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className="mt-2 text-left text-xs font-medium text-accent hover:underline"
+        >
+          {expanded ? "Mostra di meno ↑" : "Mostra di più ↓"}
+        </button>
+      )}
+      <p className="mt-4 text-sm font-semibold text-muted-foreground">— {review.name}</p>
+    </article>
+  );
+}
+
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
           <a href="#top" className="flex items-center gap-2 font-bold tracking-tight">
-            <span className="grid h-9 w-9 place-items-center rounded-lg bg-primary text-primary-foreground">
+            <span className="grid h-9 w-9 place-items-center rounded-lg bg-accent text-accent-foreground">
               <Zap className="h-5 w-5" />
             </span>
             <span>SMD <span className="hidden sm:inline text-muted-foreground font-medium">Impianti Elettrici</span></span>
@@ -186,19 +216,27 @@ function Index() {
             <div className="flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2">
               <div className="flex">{[0,1,2,3,4].map((i) => <Star key={i} className="h-4 w-4 fill-accent text-accent" />)}</div>
               <span className="text-sm font-semibold">4,3/5</span>
-              <span className="text-sm text-muted-foreground">su Google</span>
+              <span className="text-sm text-muted-foreground">su Google Maps</span>
             </div>
           </div>
-          <div className="grid gap-5 md:grid-cols-3">
-            {reviews.map((r) => (
-              <article key={r.name} className="rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-soft)]">
-                <div className="flex gap-0.5">
-                  {[0,1,2,3,4].map((i) => <Star key={i} className={`h-4 w-4 ${i < r.stars ? "fill-accent text-accent" : "text-muted-foreground/30"}`} />)}
-                </div>
-                <p className="mt-4 leading-relaxed text-foreground">"{r.text}"</p>
-                <p className="mt-4 text-sm font-semibold text-muted-foreground">— {r.name}</p>
-              </article>
-            ))}
+          <div className="relative px-10 md:px-12">
+            <Carousel
+              opts={{
+                align: "start",
+                slidesToScroll: 1,
+              }}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-3">
+                {reviews.map((r) => (
+                  <CarouselItem key={r.name} className="basis-[85%] pl-3 sm:basis-[45%] lg:basis-[31%]">
+                    <ReviewCard review={r} />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="-left-2 border-border bg-card hover:bg-accent hover:text-accent-foreground" />
+              <CarouselNext className="-right-2 border-border bg-card hover:bg-accent hover:text-accent-foreground" />
+            </Carousel>
           </div>
         </div>
       </section>
