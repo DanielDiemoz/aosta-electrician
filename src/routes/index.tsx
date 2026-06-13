@@ -134,25 +134,37 @@ function Index() {
       <section id="top" className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_oklch(0.86_0.18_95_/_0.3),_transparent_60%)]" />
         <div className="mx-auto max-w-6xl px-5 pb-20 pt-16 md:pb-32 md:pt-28">
-          <div className="max-w-3xl">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
-              <span className="h-2 w-2 rounded-full bg-accent" /> Disponibile oggi ad Aosta
+          <div className="grid items-center gap-10 md:grid-cols-2 md:gap-14">
+            <div>
+              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
+                <span className="h-2 w-2 rounded-full bg-accent" /> Disponibile oggi ad Aosta
+              </div>
+              <h1 className="text-4xl font-bold leading-[1.05] md:text-6xl lg:text-7xl">
+                Il tuo elettricista di fiducia ad <span className="bg-accent text-accent-foreground px-2 rounded-md">Aosta</span>
+              </h1>
+              <p className="mt-6 max-w-xl text-lg text-muted-foreground md:text-xl">
+                Professionalità, rapidità e affidabilità per impianti elettrici civili, industriali e domotica. Interventi in giornata in tutta la Valle d'Aosta.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <CallButton label={`📞 Chiama ora · ${PHONE_DISPLAY}`} />
+                <a href="#servizi" className="text-sm font-semibold text-foreground underline-offset-4 hover:underline">Scopri i servizi →</a>
+              </div>
+              <dl className="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-border pt-8">
+                <div><dt className="text-xs uppercase tracking-wide text-muted-foreground">Esperienza</dt><dd className="mt-1 text-2xl font-bold">15+ anni</dd></div>
+                <div><dt className="text-xs uppercase tracking-wide text-muted-foreground">Valutazione</dt><dd className="mt-1 text-2xl font-bold">4,3/5</dd></div>
+                <div><dt className="text-xs uppercase tracking-wide text-muted-foreground">Aperto</dt><dd className="mt-1 text-2xl font-bold">7/7</dd></div>
+              </dl>
             </div>
-            <h1 className="text-4xl font-bold leading-[1.05] md:text-6xl lg:text-7xl">
-              Il tuo elettricista di fiducia ad <span className="bg-accent text-accent-foreground px-2 rounded-md">Aosta</span>
-            </h1>
-            <p className="mt-6 max-w-xl text-lg text-muted-foreground md:text-xl">
-              Professionalità, rapidità e affidabilità per impianti elettrici civili, industriali e domotica. Interventi in giornata in tutta la Valle d'Aosta.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <CallButton label={`📞 Chiama ora · ${PHONE_DISPLAY}`} />
-              <a href="#servizi" className="text-sm font-semibold text-foreground underline-offset-4 hover:underline">Scopri i servizi →</a>
+            <div className="relative flex justify-center md:justify-end">
+              <div className="w-full max-w-sm overflow-hidden rounded-2xl shadow-[var(--shadow-card)] md:max-w-md">
+                <img
+                  src="/elettricista.avif"
+                  alt="Elettricista professionista ad Aosta - SMD Impianti Elettrici"
+                  className="h-auto w-full"
+                  loading="lazy"
+                />
+              </div>
             </div>
-            <dl className="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-border pt-8">
-              <div><dt className="text-xs uppercase tracking-wide text-muted-foreground">Esperienza</dt><dd className="mt-1 text-2xl font-bold">15+ anni</dd></div>
-              <div><dt className="text-xs uppercase tracking-wide text-muted-foreground">Valutazione</dt><dd className="mt-1 text-2xl font-bold">4,3/5</dd></div>
-              <div><dt className="text-xs uppercase tracking-wide text-muted-foreground">Aperto</dt><dd className="mt-1 text-2xl font-bold">7/7</dd></div>
-            </dl>
           </div>
         </div>
       </section>

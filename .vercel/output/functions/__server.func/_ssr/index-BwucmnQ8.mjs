@@ -336,34 +336,37 @@ function Index() {
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { id: "top", className: "relative overflow-hidden", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_oklch(0.86_0.18_95_/_0.3),_transparent_60%)]" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-6xl px-5 pb-20 pt-16 md:pb-32 md:pt-28", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-3xl", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "h-2 w-2 rounded-full bg-accent" }),
-          " Disponibile oggi ad Aosta"
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "text-4xl font-bold leading-[1.05] md:text-6xl lg:text-7xl", children: [
-          "Il tuo elettricista di fiducia ad ",
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-accent text-accent-foreground px-2 rounded-md", children: "Aosta" })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 max-w-xl text-lg text-muted-foreground md:text-xl", children: "Professionalità, rapidità e affidabilità per impianti elettrici civili, industriali e domotica. Interventi in giornata in tutta la Valle d'Aosta." }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 flex flex-wrap items-center gap-4", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(CallButton, { label: `📞 Chiama ora · ${PHONE_DISPLAY}` }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#servizi", className: "text-sm font-semibold text-foreground underline-offset-4 hover:underline", children: "Scopri i servizi →" })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("dl", { className: "mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-border pt-8", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("dt", { className: "text-xs uppercase tracking-wide text-muted-foreground", children: "Esperienza" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("dd", { className: "mt-1 text-2xl font-bold", children: "15+ anni" })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-6xl px-5 pb-20 pt-16 md:pb-32 md:pt-28", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid items-center gap-10 md:grid-cols-2 md:gap-14", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "h-2 w-2 rounded-full bg-accent" }),
+            " Disponibile oggi ad Aosta"
           ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("dt", { className: "text-xs uppercase tracking-wide text-muted-foreground", children: "Valutazione" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("dd", { className: "mt-1 text-2xl font-bold", children: "4,3/5" })
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "text-4xl font-bold leading-[1.05] md:text-6xl lg:text-7xl", children: [
+            "Il tuo elettricista di fiducia ad ",
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-accent text-accent-foreground px-2 rounded-md", children: "Aosta" })
           ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("dt", { className: "text-xs uppercase tracking-wide text-muted-foreground", children: "Aperto" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("dd", { className: "mt-1 text-2xl font-bold", children: "7/7" })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 max-w-xl text-lg text-muted-foreground md:text-xl", children: "Professionalità, rapidità e affidabilità per impianti elettrici civili, industriali e domotica. Interventi in giornata in tutta la Valle d'Aosta." }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 flex flex-wrap items-center gap-4", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(CallButton, { label: `📞 Chiama ora · ${PHONE_DISPLAY}` }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#servizi", className: "text-sm font-semibold text-foreground underline-offset-4 hover:underline", children: "Scopri i servizi →" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("dl", { className: "mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-border pt-8", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("dt", { className: "text-xs uppercase tracking-wide text-muted-foreground", children: "Esperienza" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("dd", { className: "mt-1 text-2xl font-bold", children: "15+ anni" })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("dt", { className: "text-xs uppercase tracking-wide text-muted-foreground", children: "Valutazione" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("dd", { className: "mt-1 text-2xl font-bold", children: "4,3/5" })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("dt", { className: "text-xs uppercase tracking-wide text-muted-foreground", children: "Aperto" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("dd", { className: "mt-1 text-2xl font-bold", children: "7/7" })
+            ] })
           ] })
-        ] })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative flex justify-center md:justify-end", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-full max-w-sm overflow-hidden rounded-2xl shadow-[var(--shadow-card)] md:max-w-md", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "/elettricista.avif", alt: "Elettricista professionista ad Aosta - SMD Impianti Elettrici", className: "h-auto w-full", loading: "lazy" }) }) })
       ] }) })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "servizi", className: "border-t border-border bg-secondary/40 py-20 md:py-28", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-6xl px-5", children: [

@@ -15,7 +15,7 @@ import "crypto";
 import "async_hooks";
 import "stream";
 import "../_libs/isbot.mjs";
-const appCss = "/assets/styles-BWgfcnPl.css";
+const appCss = "/assets/styles-CKRlWlXw.css";
 function reportLovableError(error, context = {}) {
   if (typeof window === "undefined") return;
   window.__lovableEvents?.captureException?.(
@@ -134,7 +134,7 @@ const Route$1 = createFileRoute("/sitemap.xml")({
     }
   }
 });
-const $$splitComponentImporter = () => import("./index-BBPm_ExA.mjs");
+const $$splitComponentImporter = () => import("./index-BwucmnQ8.mjs");
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Electrician",
